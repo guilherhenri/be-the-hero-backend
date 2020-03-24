@@ -30,7 +30,7 @@ module.exports = {
       .select('ong_id')
       .first();
 
-    if (incident === undefined) {
+    if (!incident) {
       return res.status(404).json({ error: 'Incident not found.' });
     }
 
